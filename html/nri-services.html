@@ -1,0 +1,115 @@
+<!-- <div loading-indicator class="waiting-box">
+	  <span>Please wait...<img src="http://intown.biz/demo/wait/waiting.gif" /></span></div> -->
+    <div class="about_us_banner">
+    	<img src="images/nri_banner.jpg" alt="" />
+        <h2>Non-Resident Indian - Services</h2>
+    </div>    
+    
+    <div class="container">
+    	<div class="row">
+        	<div class="col-lg-12">
+            	  <div class="nri_contact">
+                  	<h2>Property Purchase Guide for NRI <br /><br /> General</h2>
+                    <p>
+                    	Q1. Who is an NRI? <br />
+Ans.: Under the Foreign Exchange Regulation Act of 1973, Non-Resident Indians are:
+ <br /> <br />
+Indian citizens who stay abroad for employment or carrying on business or vocation outside India or for any other purpose in circumstances indicating an indefinite period of stay abroad;
+ <br /> <br />
+OR
+ <br /> <br />
+Government servants who are posted abroad on duty with the Indian missions and similar other agencies set up abroad by the Government of India where the officials draw their salaries out of Government resources;
+ <br /> <br />
+                        <span ng-show="ngShowhide">
+OR
+ <br /> <br />
+Government servants deputed abroad on assignments with foreign Governments or regional/international agencies like the World Bank, International Monetary Fund (IMF), World Health Organisation (WHO), Economic and Social Commission for Asia and the Pacific (ESCAP)
+ <br /> <br />
+
+OR
+ <br /> <br />
+Government servants deputed abroad on assignments with foreign Governments or regional/international agencies like the World Bank, International Monetary Fund (IMF), World Health Organisation (WHO), Economic and Social Commission for Asia and the Pacific (ESCAP)</span>
+                    </p>
+                    <div class="btn_nri">
+                    	<a ng-click="toggleBtn = !toggleBtn">{{toggleText}}</a>
+                    </div>
+                  </div>               
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="clarify_query_section">
+      		<div class="container">
+            	<div class="row">
+                	<div class="col-lg-12">
+                    	<h1>Let us clarify your Query</h1>
+                    </div>
+                </div>
+                <div class="row">
+				<form name="serviceForm">
+                	<div class="col-lg-4 col-md-4 col-sm-4">
+                    	<div class="clarify_query_form">
+                        	<div class="input_div">
+                            	<input placeholder="Name" type="text" ng-model ="user.name" name="uname" only-letters-input required ng-minlength="3" />
+								<span class="policy_cmnerror" ng-show="serviceForm.uname.$dirty && serviceForm.uname.$error.required">This is a required field</span>
+								<span class="policy_cmnerror" ng-show="serviceForm.uname.$dirty && serviceForm.uname.$error.minlength">Minimum length required is 3</span>
+            				
+                            </div>                            
+                            <div class="input_div">
+                            	<select class="test_design">
+                                	<option>+91 INDIA</option>
+                                </select>
+                            	<input class="inhalf" placeholder="Mobile Number" type="text" numbers-only ng-model="user.mobileno" name="phno" required ng-minlength="10" ng-maxlength="13" />
+								<span class="policy_cmnerror" ng-show="serviceForm.phno.$dirty && serviceForm.phno.$error.required">This is a required field</span>
+							    <span class="num_error policy_cmnerror" ng-show="serviceForm.phno.$dirty && serviceForm.phno.$error.minlength">Minimum length required is 10</span>
+							    <span class="num_error policy_cmnerror" ng-show="serviceForm.phno.$dirty && serviceForm.phno.$error.maxlength">Mobile Number is too long</span>
+		
+								
+                            </div>
+                            <div class="input_div">
+                            	<input placeholder="Email Id" type="email" name="email" ng-model ="user.email" required />
+								<span class="policy_cmnerror" ng-show="serviceForm.email.$dirty && serviceForm.email.$error.required">This is a required field</span>
+							    <span class="policy_cmnerror" ng-show="serviceForm.$error.email">Enter a valid Email Address</span>
+                            
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                    	<div class="clarify_query_form">
+                        	<div class="input_div">
+                            	<textarea placeholder="Your message" ng-model="user.msg" name="msg" required></textarea>
+								<span class="text_err policy_cmnerror" ng-show="serviceForm.msg.$dirty && serviceForm.msg.$error.required">This is a required field</span>
+                            </div>
+                            <div class="input_div">
+                            	<p>All email enquiries will be taken care in one business day</p>
+                            	<a ng-click="userQuery(user)">Submit</a>
+                            </div>
+                        </div>
+                    </div>
+					</form>
+                </div>
+            </div>
+       </div>
+	   
+	    <script type="text/ng-template" id="myModalContent.html">
+         <div class="modal-header">
+           <h3 class="modal-title">Message</h3> 
+        </div> 
+        <div class="modal-body">
+            <b>{{ message}}</b>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+            <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+        </div>
+    </script>
+    
+    		<script type="text/javascript">
+		$(document).ready(function() {
+		$('.test_design').niceSelect();
+		});
+</script>
+	 
+    
+

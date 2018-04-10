@@ -1,0 +1,61 @@
+<!-- <div loading-indicatorblogs class="waiting-box">
+	<span>Please wait...<img src="http://intown.biz/demo/wait/waiting.gif" /></span></div> -->
+<div class="container blogs_main">
+    	<div class="row">
+        	<div class="col-lg-6 col-md-6 col-sm-6">
+            	<div class="blog_main_box">
+                	<h1>How to pick your best property ? <small>by Sherlock Holmes</small></h1>
+                    <a ><img src="images/blog_img_1-1.jpg" alt="" /></a>
+                    <h5>Date : 25 - Oct, 2017</h5>
+                    <h5><i class="fa fa-comment" aria-hidden="true"></i> Interactions (10)</h5>
+                </div>
+                <div class="blog_main_box">
+                	<h1>How to pick your best property ? <small>by Sherlock Holmes</small></h1>
+                    <a ><img src="images/blog_img_2-1.jpg" alt="" /></a>
+                    <h5>Date : 25 - Oct, 2017</h5>
+                    <h5><i class="fa fa-comment" aria-hidden="true"></i> Interactions (10)</h5>
+                </div>
+                <div class="blog_main_box">
+                	<h1>How to pick your best property ? <small>by Sherlock Holmes</small></h1>
+                    <a ><img src="images/blog_img_1-1.jpg" alt="" /></a>
+                    <h5>Date : 25 - Oct, 2017</h5>
+                    <h5><i class="fa fa-comment" aria-hidden="true"></i> Interactions (10)</h5>
+                </div>
+            </div>
+            <div class="col-lg-1 col-md-1 col-sm-1"></div>
+            <div class="col-lg-5 col-md-5 col-sm-5">
+            	<div class="top_stories_main">
+                	<h1>Top Stories</h1>
+                    <div class="top_stories_info" ng-repeat = "tops in topStories">
+                    	<a ui-sref="newStory({param:tops.id,type:1})">{{tops.title}}</a>
+                        <p>{{tops.addedby}}</p>
+                    </div>
+                    
+                </div>
+                <div class="recent_stories">
+                	<h1>Recent Stories</h1>
+                    <div class="recent_stories_box" ng-repeat = "recents in recentStories">
+                    	<a ui-sref="newStory({param:recents.id,type:2})">{{recents.title}}</a>
+                        <p>{{recents.addedby}}</p>
+                        <span><img ng-src="{{imagepath}}{{recents.imgPath}}" alt="" /></span>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+        	<div class="col-lg-12">
+            	<div class="pagination_main_left">
+                	<ul class="pagination">
+                              <li><a >1</a></li>
+                              <li><a >2</a></li>
+                              <li><a >3</a></li>
+                              <li><a >4</a></li>
+                              <li><a ><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    
